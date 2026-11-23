@@ -1,0 +1,61 @@
+/* Agencia El Rodal · Navidad blanca: nieve, rojo Papá Noel, oro cálido */
+:root{--nieve:#fffdfa;--crema:#fbf3e6;--rojo:#c8282f;--rojo2:#a81f26;--pino:#1f6b4a;--oro:#b9892f;--tinta:#3a2a22;--suave:#8a766a;--borde:#efe1d0;--kraft:#f1d9a8}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%;color:var(--tinta);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ background:linear-gradient(180deg,#fff3ee 0,var(--nieve) 38%,#f3f7fb 100%) fixed}
+body:before{content:"";position:fixed;left:0;right:0;top:0;height:9px;z-index:6;background:repeating-linear-gradient(135deg,var(--rojo) 0 12px,#fff 12px 24px)}
+body:after{content:"";position:fixed;left:-5%;right:-5%;bottom:-40px;height:150px;z-index:0;pointer-events:none;
+ background:radial-gradient(120% 100% at 20% 100%,#fff 58%,transparent 59%),radial-gradient(110% 100% at 85% 100%,#eaf1f8 56%,transparent 57%);filter:drop-shadow(0 -6px 14px rgba(120,150,190,.18))}
+#snow{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:max(26px,env(safe-area-inset-top)) 18px 120px;animation:in .6s ease}
+@keyframes in{from{opacity:0;transform:translateY(12px)}}
+h1,h2,h3{margin:.2em 0;font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;letter-spacing:-.01em}h1{font-size:clamp(2.3rem,9vw,3.8rem);line-height:1.05}h2{font-size:1.8rem}
+.rojo{color:var(--rojo)}.oro{color:var(--oro)}.peq{font-size:.78rem;color:var(--suave);letter-spacing:.16em;text-transform:uppercase;margin:.4em 0}
+.cab{text-align:center;padding:3vh 0 2vh}.gorro{width:84px;height:auto;filter:drop-shadow(0 6px 8px rgba(120,60,50,.2))}.sub{color:var(--suave);font-style:italic;font-family:Georgia,serif;font-size:1.1rem}
+.glass{background:#fff;border:1px solid var(--borde);border-radius:24px;padding:20px;margin:14px 0;box-shadow:0 10px 30px rgba(120,80,50,.09)}
+.hero{text-align:center}.enun{font-size:1.12rem;line-height:1.55}.enun iframe{width:100%;border:0;border-radius:16px;background:#fff}
+/* carpetas */
+.carpetas{display:grid;grid-template-columns:1fr 1fr;gap:26px 16px;margin-top:22px}
+.carpeta{position:relative;text-align:left;font:inherit;border:0;cursor:pointer;padding:26px 14px 14px;min-height:130px;border-radius:4px 14px 14px 14px;color:var(--tinta);
+ background:linear-gradient(160deg,#f6e2b8,var(--kraft));box-shadow:0 10px 22px rgba(130,90,40,.22),inset 0 1px 0 #fff8;transition:transform .2s,box-shadow .2s}
+.carpeta:hover,.carpeta:active{transform:translateY(-4px) rotate(-.8deg)}
+.carpeta .tab{position:absolute;top:-16px;left:0;padding:3px 16px 2px;border-radius:10px 10px 0 0;background:#e9cb8f;font:600 .72rem Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;font-style:normal;color:#7a5a24}
+.carpeta b{display:block;font:700 1.55rem Georgia,serif;margin-top:20px}.carpeta small{display:block;color:#7a5a24;font-size:.78rem;margin-top:2px}
+.carpeta .sello{position:absolute;top:10px;right:8px}
+.carpeta.open{max-width:340px;margin:20px auto 18px;cursor:default;min-height:150px}.carpeta.open:hover{transform:none}
+.abierta{text-align:center}.abierta .sec{float:left}
+.sello{display:inline-block;border:2px solid var(--rojo);color:var(--rojo);padding:1px 8px;border-radius:5px;transform:rotate(-4deg);font:700 .62rem "Courier New",monospace;letter-spacing:.1em;background:#fff8}
+/* botones */
+button,.btn{font:inherit;font-weight:600;border:0;border-radius:16px;padding:14px 22px;background:linear-gradient(180deg,#d8353c,var(--rojo2));color:#fff;cursor:pointer;box-shadow:0 8px 20px rgba(200,40,47,.28);transition:transform .15s}
+button:active{transform:scale(.96)}button.sec{background:#fff;color:var(--rojo2);border:1px solid var(--borde);box-shadow:none;padding:10px 16px}
+.pad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:340px;margin:14px auto}.pad button{font-size:1.7rem;padding:18px 0;background:#fff;color:var(--tinta);border:1px solid var(--borde);box-shadow:0 4px 10px rgba(120,80,50,.08)}
+.pad button:last-child{background:var(--pino);color:#fff;border:0}
+.dig{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin:10px 0}.dig i{width:42px;height:56px;border-radius:12px;border:1.5px solid var(--borde);display:grid;place-items:center;font:700 1.6rem ui-monospace,monospace;font-style:normal;background:#fff}
+.dig i.on{border-color:var(--rojo);box-shadow:0 0 0 4px rgba(200,40,47,.12)}
+.opc{display:flex;justify-content:space-between;align-items:center;width:100%;margin:9px 0;text-align:left;background:#fff;color:var(--tinta);border:1px solid var(--borde);box-shadow:0 4px 12px rgba(120,80,50,.07);font-size:1.05rem}
+.opc b{font:700 1.35rem ui-monospace,monospace;color:var(--oro)}.opc.mal{border-color:var(--rojo);background:#fdecec;opacity:.6}.opc.bien{border-color:var(--pino);background:#e6f5ec}
+.msg{color:var(--pino);font-weight:600;margin:10px 0}.err{color:var(--rojo);min-height:1.4em;text-align:center}
+.ficha{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--borde)}.ficha:last-child{border:0}
+nav{position:fixed;left:50%;bottom:max(16px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:5;display:flex;gap:4px;padding:6px;border-radius:26px;background:#fffd;border:1px solid var(--borde);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 10px 30px rgba(120,80,50,.18)}
+nav button{background:none;box-shadow:none;color:var(--suave);padding:10px 16px;font-size:.92rem;border-radius:20px}nav button.on{background:var(--rojo);color:#fff}
+/* TELE */
+body.tv main{max-width:none;padding:2vh 3vw}body.tv nav{display:none}
+#reloj{font:700 27vw/1 ui-monospace,Menlo,monospace;text-align:center;color:var(--rojo);text-shadow:0 8px 30px rgba(200,40,47,.18);transition:all .8s;margin-top:4vh}
+#reloj.pausa{opacity:.45}
+#reloj.mini{position:fixed;top:5vh;right:3vw;margin:0;font-size:12.5vw;text-align:right;z-index:3}
+#rank{width:min(1100px,92vw);margin:4vh auto 0}#rank.mini{width:54vw;margin:3vh 0 0 2vw}
+.fila{display:flex;align-items:center;gap:2vw;font:3.4vw Georgia,serif;padding:1.2vh 2vw;margin:1vh 0;border-radius:22px;background:#fff;border:1px solid var(--borde);box-shadow:0 10px 30px rgba(120,80,50,.12)}
+.fila.nueva{animation:in .8s}.fila:first-child{border:2px solid var(--oro);box-shadow:0 0 40px rgba(185,137,47,.35)}
+.fila em{font:700 4.6vw ui-monospace,monospace;color:var(--rojo);min-width:2.2ch}.fila span{margin-left:auto;font:1.7vw Arial,sans-serif;color:var(--suave)}
+#anuncio{position:fixed;inset:0;z-index:20;display:none;place-items:center;text-align:center;color:#fff;background:radial-gradient(circle,#d8353c,#8f1a20);padding:4vw;overflow:auto}
+#anuncio.on{display:grid}#anuncio h1{font-size:8vw;text-shadow:0 8px 40px #0006;animation:lat 1s infinite}#anuncio p{font-size:3.5vw}#anuncio .peq,#anuncio .oro{color:#ffe7a8}
+#anuncio .fin h1{animation:none;font-size:6vw}#anuncio .fin .fila{color:var(--tinta);font-size:3vw}#anuncio .fin p{font-size:1.8vw}#anuncio .fin button{background:#fff;color:var(--rojo2)}
+@keyframes lat{50%{transform:scale(1.06)}}
+#cinta{position:fixed;bottom:0;left:0;right:0;z-index:4;padding:1.2vh 3vw;background:#fff;border-top:3px solid var(--rojo);font-size:1.8vw;white-space:nowrap;overflow:hidden}
+#ctl{position:fixed;right:2vw;bottom:7vh;z-index:5;display:flex;gap:8px;opacity:.35;transition:opacity .3s}#ctl:hover{opacity:1}
+#ctl button{padding:10px 18px;font-size:.95rem;border-radius:999px;background:#fff;color:var(--rojo2);border:1px solid var(--borde);box-shadow:0 4px 14px rgba(120,80,50,.15)}#ctl button:disabled{opacity:.4}
+#modal{position:fixed;inset:0;z-index:30;display:none;place-items:center;background:rgba(58,42,34,.55);backdrop-filter:blur(6px)}#modal.on{display:grid}
+#modal .caja{background:#fff;border-radius:28px;padding:28px;max-width:640px;width:92vw;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+#modal .elige{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}#modal .elige button{padding:18px;font-size:1.3rem}#modal .elige button:disabled{background:#eee;color:#aaa;box-shadow:none}
+@media(max-width:480px){.dig i{width:34px;height:48px;font-size:1.3rem}.carpeta b{font-size:1.3rem}}
+nav[hidden]{display:none}
